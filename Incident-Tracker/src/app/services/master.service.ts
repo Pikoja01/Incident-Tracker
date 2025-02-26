@@ -29,6 +29,19 @@ export class MasterService {
   deleteUserById(id: number){
     return this.http.delete(`${this.baseUrl}DeleteUserByUserId?userId=${id}`)
   }
+  createNewIncident(obj: any){
+    return this.http.post(`${this.baseUrl}createIncident`,obj)
+  }
+
+  getAllIncidents(){
+    return this.http.get(`${this.baseUrl}getAllIncidents`)
+  }
+  getIncidentCreatedByUser(id: number){
+    return this.http.get(`${this.baseUrl}getIncidentCreatedByUser?userId=${id}`)
+  }
+  getIncidentAssigntoUser(id: number){
+    return this.http.get(`${this.baseUrl}getIncidentAssigntoUser?userId=${id}`)
+  }
 
 
 }
