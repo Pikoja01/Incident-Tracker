@@ -1,0 +1,18 @@
+<div class="parent">
+    <div class="sidebar">
+        <div>
+            <h4>Dashboard</h4>
+            <a routerLink="dashboard">Home</a>
+            <a routerLink="users">Users</a>
+            <a routerLink="create-new">Create New</a>
+            <a routerLink="incident-list">Incident List</a>
+        </div>
+        <div>
+            <p>Logged in as: <strong>{{loggedUserData.userName}}</strong></p>
+            <button (click)="logOff()" type="button" class="btn btn-danger w-100">Log Off</button>
+        </div>
+    </div>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
