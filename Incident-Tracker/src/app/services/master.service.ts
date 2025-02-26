@@ -17,3 +17,18 @@ export class MasterService {
     debugger;
     return this.http.post<IAPIRESPONSE>(`${this.baseUrl}login`,obj)
   }
+  getAllUsers(){
+    return this.http.get(`${this.baseUrl}GetAllUsers`)
+  }
+  createNewUser(obj: any){
+    return this.http.post(`${this.baseUrl}Register`,obj)
+  }
+  updateUser(obj: any){
+    return this.http.post(`${this.baseUrl}UpdateUser`,obj)
+  }
+  deleteUserById(id: number){
+    return this.http.delete(`${this.baseUrl}DeleteUserByUserId?userId=${id}`)
+  }
+
+
+}
